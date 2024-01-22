@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FibonacciSeries</string>
+    <string name="fibonacci_name">Fibonacci</string>
+    <string name="instructions">
+        Introduce que número de la serie de Fibonacci quieres obtener.
+    </string>
+    <string name="serie_num_place_text">Lugar en la serie:</string>
+    <string name="obtain_button">OBTENER</string>
+    <string name="sum_button">SUMA</string>
+    <string name="position_hint">1</string>
+    <string name="number_error">La posición de la serie tiene que ser mayor a 0</string>
 </resources>

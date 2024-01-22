@@ -7,12 +7,129 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/fibonacci_name"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructions_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/instructions_text"
+        android:layout_width="280dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="65dp"
+        android:text="@string/instructions"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/position_text"
+        android:layout_width="113dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/serie_num_place_text"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/obtain_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_text" />
+
+    <Button
+        android:id="@+id/obtain_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="232dp"
+        android:layout_marginBottom="91dp"
+        android:text="@string/obtain_button"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/sum_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/position_text" />
+
+    <Button
+        android:id="@+id/sum_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="254dp"
+        android:layout_marginBottom="261dp"
+        android:text="@string/sum_button"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/obtain_button" />
+
+
+    <EditText
+        android:id="@+id/position_number"
+        android:layout_width="145dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="511dp"
+        android:autofillHints="1"
+        android:ems="10"
+        android:maxLength="4"
+        android:hint="@string/position_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_text" />
+
+
+    <LinearLayout
+        android:layout_width="277dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/sum_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/obtain_button">
+
+        <TextView
+            android:id="@+id/number_result_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="277dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sum_button">
+
+        <TextView
+            android:id="@+id/sum_result_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
